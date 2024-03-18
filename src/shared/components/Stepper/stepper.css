@@ -1,0 +1,47 @@
+.stepper-container {
+    display: flex;
+    align-items: center;
+}
+
+.stepper {
+    display: flex;
+}
+
+.stepper-circle {
+    height: 5rem;
+    width: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: var(--stepper-color);
+    color: var(--light-blue);
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+
+.stepper-line {
+    border-bottom: 5px solid var(--stepper-color);
+    width: calc(100% - 5rem);
+    height: 100%;
+}
+
+.stepper-unreached .stepper-line {
+    border-bottom: 5px solid var(--washed-up-blue);
+}
+
+.stepper-unreached .stepper-circle {
+    background-color: var(--washed-up-blue);
+
+}
+
+.stepper-text {
+    color: var(--main-gray);
+    font-size: 1.8rem;
+}
+
+.stepper-check {
+    height: 60%;
+    width: 60%;
+    color: #fff;
+}

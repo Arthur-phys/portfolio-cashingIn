@@ -1,0 +1,6 @@
+.transference-block {
+    width: 100rem;
+    text-align: center;
+    padding: var(--small-padding);
+    border-radius: var(--radius);
+}

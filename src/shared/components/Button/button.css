@@ -1,0 +1,25 @@
+.button-light {
+    background: none;
+    cursor: pointer;
+    background-color: var(--light-blue);
+    color: var(--deep-blue);
+    border-radius: var(--radius);
+    border: 1px solid var(--deep-blue); 
+    padding: 0.8rem;
+    transition: all 0.3s;
+}
+
+.button-dark {
+    background: none;
+    cursor: pointer;
+    background-color: var(--deep-blue);
+    color: var(--light-blue);
+    border-radius: var(--radius);
+    border: 1px solid var(--deep-blue); 
+    padding: 0.8rem;
+    transition: all 0.3s;
+}
+
+.button-dark:hover, .button-light:hover {
+    background-color: var(--main-color);
+}

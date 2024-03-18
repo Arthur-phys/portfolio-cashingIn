@@ -1,0 +1,67 @@
+/* general classes */
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.column-flex {
+    flex-direction: column;
+}
+
+.big {
+    width: 80%;
+    text-align: center;
+}
+
+.main-style {
+    color: var(--main-gray);
+    background: var(--light-blue);
+}
+
+.single-block {
+    height: 100vh;
+    margin: auto;
+}
+
+.grid {
+    display: grid;
+}
+
+.grid--1-col {
+    grid-template-columns: 1fr;
+    /* gap: var(--small-gap) */
+}
+
+.small-margin--top {
+    margin-top: 1.2rem;
+}
+
+.small-margin--bottom {
+    margin-bottom: 1.2rem;
+}
+
+.medium-margin--top {
+    margin-top: 2.4rem;
+}
+
+.medium-margin--bottom {
+    margin-bottom: 2.4rem;
+}
+
+.medium-big-margin--top {
+    margin-top: 3.2rem;
+}
+
+.medium-big-margin--bottom {
+    margin-bottom: 3.2rem;
+}
+
+.large-margin--bottom {
+    margin-bottom: 4.4rem;
+}
+
+.large-margin--top {
+    margin-top: 4.4rem;
+}
