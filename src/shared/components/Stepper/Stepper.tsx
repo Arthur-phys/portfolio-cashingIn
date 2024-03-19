@@ -1,10 +1,12 @@
 import { useLayoutEffect, useRef, useState } from "react";
 
 import "./stepper.css";
+import { Loader } from "../Loader/Loader";
 
 interface Props {
     steps: (number | string)[]
-    selectedStep: number
+    selectedStep: number,
+    setLoaderOn: number
 }
 
 export const Stepper = (props: Props) => {
@@ -22,6 +24,18 @@ export const Stepper = (props: Props) => {
         }
 
     },[])
+
+    const loaderOnFunction = (index: number) => {
+        if (props.setLoaderOn === index ) {
+            return (<Loader size={3} color={"var(--washed-up-blue)"}/>);
+        } else if(props.selectedStep > index ) {
+            return (
+                <svg xmlns="http://www.w3.org/2000/svg" className="ionicon stepper-check" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="32" d="M416 128L192 384l-96-96"/></svg>
+            )
+        } else {
+            return (index + 1)
+        }
+    }
 
     return (
     <>
@@ -45,9 +59,7 @@ export const Stepper = (props: Props) => {
                                 }></div>
                                 <div className="stepper-circle">
                                     {
-                                        props.selectedStep > index ? <svg xmlns="http://www.w3.org/2000/svg" className="ionicon stepper-check" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="32" d="M416 128L192 384l-96-96"/></svg>
-                                            :
-                                        (index + 1)
+                                        loaderOnFunction(index)
                                     }
                                 </div>
                             </div>
@@ -59,9 +71,7 @@ export const Stepper = (props: Props) => {
                             }>
                                 <div className="stepper-circle">
                                     {
-                                        props.selectedStep > index ? <svg xmlns="http://www.w3.org/2000/svg" className="ionicon stepper-check" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="32" d="M416 128L192 384l-96-96"/></svg>
-                                            :
-                                        (index + 1)
+                                        loaderOnFunction(index)
                                     }
                                 </div>
                             </div>

@@ -18,12 +18,14 @@
     color: var(--light-blue);
     font-size: 1.4rem;
     cursor: pointer;
+    transition: all 0.3s;
 }
 
 .stepper-line {
     border-bottom: 5px solid var(--stepper-color);
     width: calc(100% - 5rem);
     height: 100%;
+    transition: all 0.3s;
 }
 
 .stepper-unreached .stepper-line {

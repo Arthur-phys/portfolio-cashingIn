@@ -1,0 +1,18 @@
+.loader-container {
+    position: relative;
+}
+
+.loader-circle {
+    border-radius: 50%;
+    animation: loader-size 1s linear infinite;
+    position: absolute;
+}
+
+@keyframes loader-size {
+    0%, 20%, 80%, 100% {
+        transform: scale(1);
+    };
+    50% {
+        transform: scale(1.5);
+    }
+}
