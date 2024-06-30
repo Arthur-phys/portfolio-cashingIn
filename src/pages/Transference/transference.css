@@ -4,3 +4,11 @@
     padding: var(--small-padding);
     border-radius: var(--radius);
 }
+
+
+.transference-options {
+    justify-content: space-evenly;
+    list-style-type: none;
+    align-items: center;
+    display: flex;
+}

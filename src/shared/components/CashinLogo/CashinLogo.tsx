@@ -9,7 +9,7 @@ export const CashinLogo = (props: Props) => {
     switch (props.size) {
         case "big":
             return (
-            <div className={"cash-in-logo-container" + props.background ? "cash-in-background" : ""}>
+            <div className={"cash-in-logo-container" + (props.background ? " cash-in-background" : "")}>
                 
                 <span className="cash-in-logo" style={{
                     fontSize: "5.2rem"
@@ -28,7 +28,7 @@ export const CashinLogo = (props: Props) => {
 
         case "medium":
             return (
-            <div className={"cash-in-logo-container" + props.background ? "cash-in-background" : ""}>
+            <div className={"cash-in-logo-container" + (props.background ? " cash-in-background" : "")}>
                 
                 <span className="cash-in-logo" style={{
                     fontSize: "3.6rem"
@@ -47,7 +47,7 @@ export const CashinLogo = (props: Props) => {
 
         case "small":
             return (
-            <div className={"cash-in-logo-container" + props.background ? "cash-in-background" : ""}>
+            <div className={"cash-in-logo-container" + (props.background ? " cash-in-background" : "")}>
                 
                 <span className="cash-in-logo" style={{
                     fontSize: "2.4rem"
@@ -65,7 +65,9 @@ export const CashinLogo = (props: Props) => {
             );
         case "mega":
             return (
-                <div className={"cash-in-logo-container" + props.background ? "cash-in-background" : ""}>
+                <div className={"cash-in-logo-container" + (props.background ? " cash-in-background" : "")} style={{
+                    padding: "var(--small-padding)"
+                }}>
                     
                     <span className="cash-in-logo" style={{
                         fontSize: "8.6rem"
@@ -75,7 +77,7 @@ export const CashinLogo = (props: Props) => {
                     
                     <img src="/public/wallet.svg" style={{
                         height: "8.6rem",
-                        width: "8.6rem"
+                        width: "8.6rem",
                     }}>
                     </img>
                 

@@ -1,4 +1,4 @@
-import { useLayoutEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import "./stepper.css";
 import { Loader } from "../Loader/Loader";
@@ -16,7 +16,7 @@ export const Stepper = (props: Props) => {
     const [containerLen,setContainerLen] = useState(0);
     const [centeredLine,setCenteredLine] = useState(0);
 
-    useLayoutEffect(() => {
+    useEffect(() => {
 
         if (containerRef.current) {
             setContainerLen(containerRef.current.offsetWidth);

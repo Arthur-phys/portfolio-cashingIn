@@ -3,6 +3,8 @@ import { CashinLogo } from '../../shared/components/CashinLogo/CashinLogo';
 import { Stepper } from '../../shared/components/Stepper/Stepper';
 
 import './transference.css';
+import { Card } from '../../shared/components/Card/Card';
+import { InputCode } from '../../shared/components/InputCode/InputCode';
 
 interface Props {
     username: string
@@ -23,8 +25,8 @@ export const Transference = (props: Props) => {
             <div className="transference-block main-style">
                 <div className="transference-step-by-step">
                     <Stepper steps={
-                        ["Please, choose an account to transfer to",
-                        "Please, select the amount to transfer",
+                        ["Please, choose how to cash in your prize:",
+                        "Please, introduce your code",
                         "Please, confirm the transference"]
                     }
                     selectedStep={selectedStep}
@@ -32,40 +34,34 @@ export const Transference = (props: Props) => {
                     />
                 </div>
                 <main className="transference-menus">
-                    {props.username}
-                    <div>
-                        <button onClick={() => {
-                            setSelectedStep(0);
-                        }}>
-                            Haz click aquí para ir a 1
-                        </button>
-                        <button onClick={() => {
-                            setLoaderStep(0)
-                        }}>
-                            Haz click aquí para mostrar el loader en 1
-                        </button>
-                        <button onClick={() => {
-                            setLoaderStep(-1)
-                        }}>
-                            Haz click aquí para quitar el loader en 1
-                        </button>
-                    </div>
-                    <div>
 
-                        <button onClick={() => {
-                            setSelectedStep(1);
-                        }}>
-                            Haz click aquí para ir a 2
-                        </button>
-                    </div>
-                    <div>
+                    {
+                        selectedStep === 0 &&
+                        <ul className="transference-options medium-margin--top">
+                            <li>
+                                <Card onClick={() => {
+                                    setSelectedStep(1);
+                                }} text="Debit card" icon="/public/card.svg"></Card>
+                            </li>
+                            <li>
+                                <Card onClick={() => {
+                                    setSelectedStep(1);
+                                }} text="Cash" icon='/public/money.svg'></Card>
+                            </li>
+                            <li>
+                                <Card onClick={() => {
+                                    setSelectedStep(1);
+                                }} text="As products" icon='/public/gift.svg'></Card>
+                            </li>
+                        </ul>
 
-                        <button onClick={() => {
-                            setSelectedStep(2);
-                        }}>
-                            Haz click aquí para ir a 3
-                        </button>
-                    </div>
+                    }
+                    {
+                        selectedStep === 1 &&
+                        <InputCode/>
+                    }
+                    
+                    
                 </main>
             </div>
         </div>

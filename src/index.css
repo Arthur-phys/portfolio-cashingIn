@@ -49,5 +49,6 @@ html {
     --stepper-color: #297bc0;
     --main-gray: #495057;
     --small-padding: 2rem;
+    --mini-padding: 1rem;
     --radius: 5px;
 }
