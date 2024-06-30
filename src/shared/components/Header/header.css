@@ -1,0 +1,27 @@
+.header {
+    background-color: #fff;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    height: 8vh;
+    padding: var(--mini-padding) var(--small-padding);
+}
+
+.header-sections-container {
+    gap: var(--small-padding);
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6rem;
+    display: flex;
+}
+
+.header-section {
+    color: var(--second-gray);
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.header-section:hover {
+    font-size: 1.7rem;
+    color: var(--main-gray);
+}

@@ -3,14 +3,22 @@
     width: 5rem;
 }
 
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
+.inputcode-single-character {
+    border:none;
+    background-image:none;
+    background-color:transparent;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+.inputcode-single-character::-webkit-outer-spin-button,
+.inputcode-single-character::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
 /* Firefox */
-input[type=number] {
+.inputcode-single-character[type=number] {
   -moz-appearance: textfield;
-  appearance: textfield;
 }

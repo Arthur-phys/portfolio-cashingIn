@@ -1,0 +1,31 @@
+.footer {
+    background-color: #fff;
+    position: absolute;
+    display: flex;
+    width: 100%;
+    padding: var(--mini-padding) var(--small-padding);
+    bottom: 0;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-platforms {
+    display: flex;
+    gap: var(--mini-padding);
+}
+
+.footer-platform {
+    background-color: var(--deep-blue);
+    border-radius: 50%;
+    height: 3rem;
+    width: 3rem;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+.footer-section {
+    font-size: 1.6rem;
+    color: var(--main-gray);
+    cursor: pointer;
+    text-decoration: none;
+}

@@ -48,6 +48,8 @@ html {
     --blue-transparent: rgba(244, 250, 255, 0.9);
     --stepper-color: #297bc0;
     --main-gray: #495057;
+    --second-gray: #626d77;
+    --medium-padding: 4rem;
     --small-padding: 2rem;
     --mini-padding: 1rem;
     --radius: 5px;

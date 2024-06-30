@@ -6,6 +6,7 @@ import "./login.css";
 
 import { useAuth0 } from "@auth0/auth0-react";
 import { useNavigate } from "react-router-dom";
+import { Header } from "../../shared/components/Header/Header";
 
 interface Props {
     setUser: (userName: string) => void
